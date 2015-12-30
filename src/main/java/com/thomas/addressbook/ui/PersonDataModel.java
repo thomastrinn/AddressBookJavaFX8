@@ -1,4 +1,4 @@
-package com.thomas.addressbook;
+package com.thomas.addressbook.ui;
 
 import javafx.beans.property.SimpleStringProperty;
 

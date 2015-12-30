@@ -1,5 +1,6 @@
 package com.thomas.addressbook;
 
+import com.thomas.addressbook.ui.AddressBookView;
 import javafx.application.Application;
 import javafx.stage.Stage;
 

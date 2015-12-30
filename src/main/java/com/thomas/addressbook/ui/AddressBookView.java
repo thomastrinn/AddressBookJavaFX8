@@ -1,5 +1,6 @@
-package com.thomas.addressbook;
+package com.thomas.addressbook.ui;
 
+import com.thomas.addressbook.ViewLoader;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
