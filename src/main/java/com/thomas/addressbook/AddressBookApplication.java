@@ -13,7 +13,7 @@ public class AddressBookApplication extends Application {
     public void start(Stage primaryStage) throws Exception {
         ApplicationContainer container = ApplicationContainer.getInstance();
         
-        container.getBean(FxMain.class).start(primaryStage, getParameters());
+        container.getBean(AddressBookView.class).start(primaryStage, getParameters());
     }
     
     public static void main(String[] args) {
