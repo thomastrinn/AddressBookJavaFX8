@@ -18,7 +18,6 @@ public class AddressBookView {
 
     public void start(Stage stage, Application.Parameters parameters) throws Exception {
         stage.setTitle("Address Book");
-        stage.setResizable(false);
         
         stage.setScene(new Scene(viewLoader.load(ADDRESS_BOOK_FXML)));
         stage.show();

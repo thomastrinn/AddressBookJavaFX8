@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.*?>
+<?import javafx.collections.FXCollections?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.control.cell.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
+<?import com.thomas.addressbook.PersonDataModel?>
 
 <GridPane alignment="CENTER" hgap="10.0" vgap="10.0"
           xmlns:fx="http://javafx.com/fxml"
@@ -13,7 +15,46 @@
     <padding>
         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
     </padding>
-    <TableView fx:id="adressBokkTable" GridPane.columnIndex="0" 
+    <TableView fx:id="adressBokkTable"
+               GridPane.columnIndex="0"
                GridPane.rowIndex="1">
+        <columns>
+            <TableColumn fx:id="firstNameColumn"
+                         text="First Name" 
+                         prefWidth="110">
+                <cellValueFactory>
+                    <PropertyValueFactory property="firstName" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Last Name"
+                         prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="lastName" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Email Address"
+                         prefWidth="250">
+                <cellValueFactory>
+                    <PropertyValueFactory property="email" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <PersonDataModel firstName="Jacob" lastName="Smith"  
+                                 email="jacob.smith@example.com"/>
+                <PersonDataModel firstName="Isabella" lastName="Johnson" 
+                                 email="isabella.johnson@example.com"/>
+                <PersonDataModel firstName="Ethan" lastName="Williams" 
+                                 email="ethan.williams@example.com"/>
+                <PersonDataModel firstName="Emma" lastName="Jones"
+                                 email="emma.jones@example.com"/>
+                <PersonDataModel firstName="Michael" lastName="Brown" 
+                                 email="michael.brown@example.com"/>
+            </FXCollections>
+        </items>
+        <sortOrder>
+            <fx:reference source="firstNameColumn"/>
+        </sortOrder>
     </TableView>
 </GridPane>
