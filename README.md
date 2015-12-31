@@ -7,3 +7,5 @@ What you will get:
 * How to set up a project for using CDI in JSE
 * How to set up a project for using JPA in JSE
 * How to create a GUI with JavaFX 8
+
+[for more information see the wiki](https://github.com/thomastrinn/AddressBookJavaFX8/wiki)
