@@ -17,7 +17,6 @@ public class ApplicationContainer {
         return ApplicationContainerLoader.INSTANCE;
     }
     
-    private final Weld weld;
     private final WeldContainer container;
     
     private ApplicationContainer() {
@@ -25,14 +24,7 @@ public class ApplicationContainer {
             throw new IllegalStateException("Already instantiated");
         }
         
-        this.weld = new Weld();
-        this.container = weld.initialize();
-        Runtime.getRuntime().addShutdownHook(new Thread() {
-            @Override
-            public void run() {
-                weld.shutdown();
-            }
-        });
+        this.container = new Weld().initialize();
     }
     
      public <T> T getBean(Class<T> type) {
